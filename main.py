@@ -4,7 +4,7 @@ from tweetText import tweetText
 twische = BlockingScheduler()
 
 
-@twische.scheduled_job('interval', minutes=10)
+@twische.scheduled_job('interval', minutes=30, start_date="2021-07-18 00:00:00")
 def timed_job():
     tweetText()
 
