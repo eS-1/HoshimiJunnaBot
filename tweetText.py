@@ -1,7 +1,7 @@
 import random
-# import tweepy
+import tweepy
 from typing import List
-# from config import myAPI
+from config import myAPI
 
 
 def importTexts() -> List[str]:
@@ -24,22 +24,22 @@ def makeSentence(texts: List[str]) -> str:
     return textInTweet
 
 
-# def tweetText():
-#     '''
-#     ツイートする。
-#     '''
-#     texts = importTexts()
-#     tweet = makeSentence(texts)
+def tweetText():
+    '''
+    ツイートする。
+    '''
+    texts = importTexts()
+    tweet = makeSentence(texts)
 
-#     i = 0
-#     while i < 100:
-#         try:
-#             myAPI.update_status(tweet)
-#         except tweepy.TweepError:
-#             i += 1
-#             tweet = makeSentence(texts)
-#         else:
-#             break
+    i = 0
+    while i < 100:
+        try:
+            myAPI.update_status(tweet)
+        except tweepy.TweepError:
+            i += 1
+            tweet = makeSentence(texts)
+        else:
+            break
 
 
 # テスト用
