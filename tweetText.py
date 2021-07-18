@@ -44,4 +44,5 @@ def tweetText():
 
 # テスト用
 if __name__ == "__main__":
-    print(makeSentence(importTexts()))
+    # print(makeSentence(importTexts()))
+    myAPI.update_status("test")
