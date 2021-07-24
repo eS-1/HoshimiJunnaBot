@@ -30,10 +30,9 @@ def replyAsBot():
 
 def test():
     status = myAPI.mentions_timeline(cont=20)
-    print(time.time())
     for mention in status:
         mentionTime = mention.created_at.timestamp()
-        print(mentionTime)
+        print(time.time() - mentionTime)
 
 
 if __name__ == "__main__":
