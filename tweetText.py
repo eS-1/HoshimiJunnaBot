@@ -20,7 +20,7 @@ def makeSentence(texts: List[str]) -> str:
     '''
     text: str = random.choice(texts)
     phrase: List[str] = text.split(',')
-    textInTweet: str = "「" + phrase[0] + "」、" + phrase[1] + "の言葉よ。"
+    textInTweet: str = "「" + phrase[0] + "」" + phrase[1] + "の言葉よ。"
     return textInTweet
 
 
@@ -44,5 +44,4 @@ def tweetText():
 
 # テスト用
 if __name__ == "__main__":
-    # print(makeSentence(importTexts()))
-    myAPI.update_status("test")
+    print(makeSentence(importTexts()))
