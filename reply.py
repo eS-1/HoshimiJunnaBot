@@ -13,7 +13,7 @@ def replyAsBot():
 
         baseText: str = "@" + str(mention.user.screen_name) + " "
 
-        if nowTime - mentionTime < 60:
+        if nowTime - mentionTime < 32460:
             if "御して言葉" in mention.text:
                 replyText = baseText + gyoshiteKotoba()
             
