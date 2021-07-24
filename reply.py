@@ -26,3 +26,14 @@ def replyAsBot():
                         replyText = baseText + gyoshiteKotoba()
                     else:
                         break
+
+
+def test():
+    status = myAPI.mentions_timeline(cont=20)
+    for mention in status:
+        mentionTime = mention.created_at.timestamp()
+        print(mentionTime)
+
+
+if __name__ == "__main__":
+    test()
