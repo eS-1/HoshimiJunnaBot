@@ -1,2 +1,2 @@
-web: python index.py
+worker: python replyMain.py
 clock: python main.py
