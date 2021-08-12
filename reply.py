@@ -11,12 +11,12 @@ def replyAsBot():
     for mention in status:
         mentionTime = mention.created_at.timestamp()
 
-        baseText: str = "@" + str(mention.user.screen_name) + " "
+        baseText: str = f"@{mention.user.screen_name} "
 
         if nowTime - mentionTime < 32460:
             if "御して言葉" in mention.text:
                 replyText = baseText + gyoshiteKotoba()
-            
+
                 i = 0
                 while i < 100:
                     try:
@@ -29,7 +29,7 @@ def replyAsBot():
 
 
 def test():
-    status = myAPI.mentions_timeline(cont=20)
+    status = myAPI.mentions_timeline(count=20)
     for mention in status:
         mentionTime = mention.created_at.timestamp()
         print(time.time() - mentionTime)
