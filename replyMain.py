@@ -4,7 +4,7 @@ from reply import replyAsBot
 replyJob = BlockingScheduler()
 
 
-@replyJob.scheduled_job('interval', minutes=1)
+@replyJob.scheduled_job('interval', minutes=5)
 def reply_job():
     replyAsBot()
 
