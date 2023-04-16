@@ -35,7 +35,7 @@ def tweetText():
     while i < 100:
         try:
             myClient.create_tweet(text=tweet)
-        except tweepy.TweepError:
+        except tweepy.TweepyException:
             i += 1
             tweet = makeSentence(texts)
         else:

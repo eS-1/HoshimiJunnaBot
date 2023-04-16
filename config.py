@@ -2,4 +2,4 @@ import os
 import tweepy
 
 
-myClient = tweepy.Client(os.environ["BEARER_TOKEN"])
+myClient = tweepy.Client(bearer_token=os.environ["BEARER_TOKEN"])
