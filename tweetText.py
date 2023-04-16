@@ -1,7 +1,7 @@
 import random
 import tweepy
 from typing import List
-from config import myAPI
+from config import myClient
 
 
 def importTexts() -> List[str]:
@@ -34,7 +34,7 @@ def tweetText():
     i = 0
     while i < 100:
         try:
-            myAPI.update_status(tweet)
+            myClient.create_tweet(text=tweet)
         except tweepy.TweepError:
             i += 1
             tweet = makeSentence(texts)
