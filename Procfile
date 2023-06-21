@@ -1,1 +1,1 @@
-clock: trap '' SIGTERM; python main.py & wait -n; kill -SIGTERM -$$; wait
+clock: python main.py
