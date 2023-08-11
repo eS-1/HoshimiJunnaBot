@@ -1,12 +1,15 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
-from tweetText import tweetText
+
+from misskey_bot import noteText
+from twitter_bot import tweetText
 
 twische = BlockingScheduler()
 
 
-@twische.scheduled_job('interval', minutes=30, start_date="2023-06-22 00:30:00")
+@twische.scheduled_job('interval', minutes=30, start_date="2023-08-12 00:30:00")
 def timed_job():
     tweetText()
+    noteText()
 
 
 if __name__ == "__main__":

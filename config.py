@@ -1,6 +1,7 @@
 import os
-import tweepy
 
+import tweepy
+from misskey import Misskey
 
 myClient = tweepy.Client(
     bearer_token=os.environ["BEARER_TOKEN"],
@@ -9,3 +10,5 @@ myClient = tweepy.Client(
     access_token=os.environ["ACCESS_TOKEN"],
     access_token_secret=os.environ["ACCESS_TOKEN_SECRET"]
 )
+
+misskeyClient = Misskey("https://misskey.io/", os.environ["MISSKEY_TOKEN"])
