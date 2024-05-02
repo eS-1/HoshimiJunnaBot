@@ -14,7 +14,7 @@ def tweetText():
     i = 0
     while i < 100:
         try:
-            myClient.create_tweet(text=tweet)
+            myClient.create_tweet(text=tweet, reply_settings="following")
         except tweepy.TweepyException:
             i += 1
             tweet = makeSentence(texts)

@@ -1,3 +1,4 @@
 tweepy==4.13.0
 APScheduler==3.7.0
 Misskey.py==4.1.0
+atproto==0.0.46
